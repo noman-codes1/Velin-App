@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../components/Navbar";
+import NotepadEditor from "../components/NotepadEditor";
+import RecentHistory from "../components/RecentHistory";
+import Footer from "../components/Footer";
 
 const Home = () => {
-  return (
-    <div>You are Home</div>
-  )
-}
+  const isDataPresent = false
 
-export default Home
+  return (
+    <div>
+      <Navbar />
+      <NotepadEditor />
+      <RecentHistory isPresent={isDataPresent} />
+      <Footer />
+    </div>
+  );
+};
+
+export default Home;

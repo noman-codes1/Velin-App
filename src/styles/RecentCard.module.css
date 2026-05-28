@@ -1,0 +1,33 @@
+.component_border{
+    width: 22rem;
+    height: 13rem;
+    border: 2px solid blue;
+    padding: 0.85rem;
+}
+.user_title{
+    font-size: 1.35rem;
+    margin-bottom: 0.3rem;
+}
+.user_description{
+    font-size: 1.15rem;
+    line-height: 1.2;
+}
+.container{
+    border-top: 2px solid black;
+    display: flex;
+    margin-top: 1.5rem;
+    padding: 0.2rem 0rem;
+    padding-top: 0.54rem;
+}
+.time{
+    display: flex;
+    gap: 0.2rem;
+    /* align-items: center; */
+}
+.icon_wrapper{
+    margin-left: auto;
+    cursor: pointer;
+}
+.icon_wrapper:hover{
+    color: red;
+}

@@ -1,0 +1,29 @@
+.header{
+    display: flex;
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    align-items: center;
+}
+.div_company{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.div_company img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.div_company p{
+    color: pink;
+}
+.div_navigation{
+    margin-left: auto;
+}
+.div_navigation a{
+    color: black;
+    margin-left: 0.5rem;
+    text-decoration: none;
+}
+.div_navigation a:hover{
+    color: red;
+}
