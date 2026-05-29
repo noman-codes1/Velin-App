@@ -2,10 +2,9 @@ import React from "react";
 import { Trash } from "lucide-react";
 import { Clock3 } from "lucide-react";
 import styles from '../styles/RecentCard.module.css'
+import { getTheTime } from "../utils/date";
 
-const RecentCard = ({cardData}) => {
-console.log("The card data is ", cardData)
-const currentTime = Date.now() - cardData.createdAt
+const RecentCard = ({cardData, itemToDeleteRC}) => {
 
   return (
     <div className={styles.component_border}>
@@ -18,9 +17,9 @@ const currentTime = Date.now() - cardData.createdAt
             <div>
                 <Clock3 size={18}/>
             </div>
-            <p>{currentTime}</p>
+            <p>{getTheTime(cardData.createdAt)}</p>
         </div>
-        <div className={styles.icon_wrapper}>
+        <div onClick={()=> itemToDeleteRC(cardData.id)} className={styles.icon_wrapper}>
           <Trash size={18}/>
         </div>
       </div>

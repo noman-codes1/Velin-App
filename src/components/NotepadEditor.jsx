@@ -9,8 +9,9 @@ const NotepadEditor = () => {
   const [isDataPresent, setIsDataPresent] = useState(false)
   const [dataNote, setDataNote] = useState(JSON.parse(localStorage.getItem("noteData")) || [])
 
-  const handleSubmit = () => {
-    
+  //handling submission when the form is being submitted
+  const handleSubmit = (e) => {
+    e.preventDefault()
     //getting old data and merging it with new data basically replacing
     //a whole array because array gets replaced
     const oldNote = dataNote
@@ -41,6 +42,14 @@ const NotepadEditor = () => {
   useEffect(() => {
     setIsDataPresent(!!JSON.parse(localStorage.getItem("noteData")))
   }, [])
+
+  //handling deletion of
+  const deleteFunction = (deleteItemId)=>{
+    const arrayAfterDeletion = dataNote.filter(elem => elem.id != deleteItemId)
+    localStorage.setItem("noteData", JSON.stringify(arrayAfterDeletion))
+    setDataNote(arrayAfterDeletion)
+    alert("Delete Successfully")
+  }
   
 
   return (
@@ -51,12 +60,14 @@ const NotepadEditor = () => {
         <p className={styles.dialog}>
           A minimalist space for your ideas, meetings, and daily reflections.
         </p>
-        <form action="" className={styles.editor}>
+        <form onSubmit={(event) => handleSubmit(event)} className={styles.editor}>
           <input
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Give your note a title..."
+            required
+            maxLength="200"
           />
           <textarea
             name="description"
@@ -64,10 +75,12 @@ const NotepadEditor = () => {
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
             placeholder="Start typing your thoughts here..."
+            required
+            maxLength="3200"
           ></textarea>
           <div>
-            <p>2/74</p>
-            <button type="button" onClick={handleSubmit}>
+            <p>{desc.length}/3200</p>
+            <button type="submit">
               Save Note
             </button>
           </div>
@@ -75,7 +88,7 @@ const NotepadEditor = () => {
       </div>
 
       {/* Putting here a dynamic content */}
-      <RecentHistory isPresent={isDataPresent} dataArray={dataNote}/>
+      <RecentHistory isPresent={isDataPresent} dataArray={dataNote} itemToDeleteRH={deleteFunction}/>
     </div>
   );
 };

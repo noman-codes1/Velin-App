@@ -3,16 +3,31 @@
     height: 13rem;
     border: 2px solid blue;
     padding: 0.85rem;
+    position: relative;
 }
 .user_title{
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-size: 1.35rem;
     margin-bottom: 0.3rem;
 }
 .user_description{
+    display: -webkit-box;
+    line-clamp: 4; /* tells how much lines to keep */
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical; /* tells in which direction (vertical or horizontal) to count the lines */
+    overflow: hidden; /* hides all the lines from line 5 */
+    overflow-wrap: break-word; /* break long words  */
     font-size: 1.15rem;
     line-height: 1.2;
 }
 .container{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
     border-top: 2px solid black;
     display: flex;
     margin-top: 1.5rem;
