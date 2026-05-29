@@ -3,9 +3,11 @@ import { FileText } from "lucide-react";
 import styles from "../styles/RecentHistory.module.css";
 import RecentCard from "./RecentCard";
 
-const RecentHistory = ({ isPresent }) => {
+const RecentHistory = ({ isPresent, dataArray }) => {
+  console.log(dataArray[dataArray.length-1])
 
   return (
+    // checking which one to render
     <div
       className={
         !isPresent
@@ -14,6 +16,8 @@ const RecentHistory = ({ isPresent }) => {
       }
     >
       <h2 className={styles.heading}>Recent Notes</h2>
+
+      {/* This will render based on conditons coming from upper tree */}
       {!isPresent ? (
         <div className={styles.container}>
           <div className={styles.icon_wrapper}>
@@ -26,9 +30,11 @@ const RecentHistory = ({ isPresent }) => {
         </div>
       ) : (
         <div className={styles.card}>
-          <RecentCard />
-          <RecentCard />
-          <RecentCard />
+          {/* This helps to get the fill exact data in the card and
+          also do the sorting stuff */}
+          {dataArray.slice(-3).reverse().map((noteObject)=>{
+            return <RecentCard key={noteObject.id} cardData={noteObject}/>
+          })}
         </div>
       )}
     </div>
