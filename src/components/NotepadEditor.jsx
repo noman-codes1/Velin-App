@@ -40,7 +40,12 @@ const NotepadEditor = () => {
 
   //to toggle the UI in the 'Recent History' for the first time
   useEffect(() => {
-    setIsDataPresent(!!JSON.parse(localStorage.getItem("noteData")))
+    if (dataNote.length === 0){
+      setIsDataPresent(false)
+    } else {
+      setIsDataPresent(true)
+    }
+    // setIsDataPresent(!!JSON.parse(localStorage.getItem("noteData")))
   }, [])
 
   //handling deletion of
@@ -48,7 +53,11 @@ const NotepadEditor = () => {
     const arrayAfterDeletion = dataNote.filter(elem => elem.id != deleteItemId)
     localStorage.setItem("noteData", JSON.stringify(arrayAfterDeletion))
     setDataNote(arrayAfterDeletion)
-    alert("Delete Successfully")
+
+    //checking and stopping the conditional execution if empty array is present
+    if(arrayAfterDeletion.length === 0){
+      setIsDataPresent(false)
+    }
   }
   
 

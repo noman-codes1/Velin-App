@@ -1,0 +1,5 @@
+1. dataArray state (react variable) of ViewNotes.jsx has no realtions
+with dataArray of NotepadEditor.jsx. These are two independent variable,
+just the name are kept safe by mistake.
+
+2. user_title is classname but userTitle is a part of object.

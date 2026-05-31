@@ -1,0 +1,57 @@
+.border_ofNDV{
+    /* height: 100vh; */
+    border: 2px solid red;
+    padding: 4rem 18rem;
+}
+.container{
+    min-height: 80vh;
+    border: 2px solid maroon;
+    padding: 2rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.container_divOne{
+    display: flex;
+    padding-bottom: 0.5rem;
+}
+.container_divOne p{
+    margin-left: auto;
+}
+.heading{
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid black;
+}
+.description{
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.35;
+    letter-spacing: 0.05rem;
+    padding-bottom: 2rem;
+}
+.container_divTwo{
+    margin-top: auto;
+    border-top: 1px solid black;
+    padding: 2rem 0rem;
+    display: flex;
+}
+.edit_btn{
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    display: none;
+}
+.delete_btn{
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}

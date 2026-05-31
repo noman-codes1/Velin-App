@@ -1,0 +1,52 @@
+.component_border{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.8);
+    z-index: 10000;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* pointer-events: none; */
+}
+.container{
+    background-color: beige;
+    padding: 2rem;
+    width: 28rem;
+    height: auto;
+    border-radius: 0.8rem;
+}
+.warningIcon_wrapper{
+    background-color: blue;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+.heading{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+.warning_para{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+}
+.cancelDel_btn{
+    border-top: 1px solid black;
+    padding-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+.cancel_btn{
+    margin-left: auto;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.95rem;
+}
+.del_btn{
+    padding: 0.5rem 1.5rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}

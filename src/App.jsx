@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import ViewNotes from './pages/ViewNotes'
 import About from './pages/About'
 import End from './pages/End'
+import NoteDetailView from './components/NoteDetailView'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/privacy" element={<End />} />
         <Route path="/terms" element={<End />} />
         <Route path="/contact" element={<End />} />
+        <Route path="/viewnotes/:id" element={<NoteDetailView />} />
       </Routes>
     </>
   );

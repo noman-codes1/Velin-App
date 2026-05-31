@@ -1,11 +1,10 @@
 import React from "react";
 import { FileText } from "lucide-react";
 import styles from "../styles/RecentHistory.module.css";
-import RecentCard from "./RecentCard";
+import Card from "./Card";
 import { ErrorBoundary } from "react-error-boundary";
 
 const RecentHistory = ({ isPresent, dataArray, itemToDeleteRH }) => {
-  console.log(dataArray[dataArray.length - 1]);
 
   return (
     // checking which one to render
@@ -34,11 +33,11 @@ const RecentHistory = ({ isPresent, dataArray, itemToDeleteRH }) => {
           <div className={styles.card}>
             {/* This helps to get the fill exact data in the card and
           also do the sorting stuff */}
-            {dataArray
+            {[...dataArray]
               .slice(-3)
               .reverse()
               .map((noteObject) => {
-                return <RecentCard key={noteObject.id} cardData={noteObject} itemToDeleteRC={itemToDeleteRH}/>;
+                return <Card key={noteObject.id} cardData={noteObject} itemToDeleteCard={itemToDeleteRH}/>;
               })}
           </div>
         </ErrorBoundary>

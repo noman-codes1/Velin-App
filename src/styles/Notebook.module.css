@@ -1,0 +1,70 @@
+.component_border{
+    width: 100%;
+    height: 100vh;
+    border: 2px solid black;
+    padding: 4rem 8rem;
+}
+.container{
+    display: flex;
+}
+.inner_container{
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid green; */
+}
+.search_container{
+    display: flex;
+    border: 2px solid red;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+}
+.search_container input{
+    border: none;
+    font-size: 1.2rem;
+}
+.search_container input:focus{
+    outline: none;
+}
+.inner_container a{
+    background-color: blue;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.inner_container a:hover{
+    background-color: red;
+}
+.card_container{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* border: 2px solid red; */
+    gap: 2rem;
+}
+.pagination_button{
+    margin-top: 1rem;
+    /* border: 2px solid blue; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.pagination_button button{
+    width: 2rem;
+    cursor: pointer;
+}
+.amDisabled{
+    pointer-events: none;
+}
+.current_pageNumber{
+    background-color: blue;
+    color: white;
+    border: none;
+}
