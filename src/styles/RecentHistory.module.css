@@ -1,42 +1,54 @@
 .component_borders_noData{
-    border: 2px solid red;
-    padding: 1.5rem 14rem;
+    padding: 2.5rem 20rem;
+    padding-bottom: 6rem;
+    background-color: var(--background-color);
 }
 .component_borders_data{
-    border: 5px solid maroon;
-    padding: 1.5rem 6rem;
+    padding: 2.5rem;
+    padding-bottom: 6rem;
+    background-color: var(--background-color);
 }
 .heading{
-    border-left: 0.3rem solid grey;
-    padding: 0rem 0.3rem;
+    border-left: 0.3rem solid var(--border-color);
+    padding: 0.3rem 0.5rem;
+    display: inline-block;
     margin-bottom: 2rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--primary-color);
 }
 .container{
-    border: 2px solid black;
-    height: 15rem;
+    border: 0.15rem dotted var(--border-color);
+    height: 18rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 0.5rem;
 }
 .icon_wrapper{
-    background-color: grey;
-    padding: 1rem;
+    color: #c7c7c7;
+    padding: 1rem 1.1rem;
     border-radius: 50%;
     margin-bottom: 1rem;
+    background-color: #ffffff;
 }
 .para_one{
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 .para_two{
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.05rem;
     text-align: center;
-    margin: 0rem 16rem;
+    margin: 0rem 10rem;
+    color: var(--secondary-color);
 }
 .card{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* gap: 1rem; */
+    grid-template-columns: repeat(3, 24rem);
+    gap: 1.5rem;
+    justify-content: center;
 }

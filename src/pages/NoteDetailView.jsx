@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { useNavigate, useParams } from "react-router-dom";
 import { ChevronLeft, Trash } from "lucide-react";
 import styles from "../styles/NoteDetailView.module.css";
 import { getTheTime } from "../utils/date";
-import ConfirmDeletion from "./ConfirmDeletion";
+import ConfirmDeletion from "../components/ConfirmDeletion";
 import { useState } from "react";
 
 const NoteDetailView = () => {
@@ -37,8 +37,8 @@ const NoteDetailView = () => {
             <div className={styles.container}>
               <div className={styles.container_divOne}>
                 <button onClick={() => navigate(-1)}>
-                  <ChevronLeft size={12} />
-                  Back to Note
+                  <ChevronLeft size={15} />
+                  Back to Notes
                 </button>
                 <p>Created {getTheTime(dataObject.createdAt)}</p>
               </div>
@@ -52,7 +52,7 @@ const NoteDetailView = () => {
                   onClick={() => setShowDeleteComponent(true)}
                   className={styles.delete_btn}
                 >
-                  <Trash size={17} /> Delete
+                  <Trash size={14} /> Delete
                 </button>
               </div>
             </div>

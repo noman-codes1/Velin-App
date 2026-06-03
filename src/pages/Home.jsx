@@ -2,13 +2,13 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import NotepadEditor from "../components/NotepadEditor";
 import Footer from "../components/Footer";
+import { useState } from "react";
 
 const Home = () => {
-  const isDataPresent = false
-
+  
   return (
     <div>
-      <Navbar />
+      <Navbar/>
       <NotepadEditor />
       <Footer />
     </div>

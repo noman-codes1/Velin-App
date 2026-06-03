@@ -1,9 +1,14 @@
 .component_border{
-    width: 22rem;
-    height: 13rem;
-    border: 2px solid blue;
-    padding: 0.85rem;
-    position: relative;
+    width: 24rem;
+    height: 16rem;
+    border: 0.1rem solid var(--border-color);
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.component_border:hover .user_title{
+    color: var(--primary-btn-color-hover);
 }
 .user_title{
     display: -webkit-box;
@@ -11,8 +16,9 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    font-size: 1.35rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 .user_description{
     display: -webkit-box;
@@ -21,29 +27,38 @@
     -webkit-box-orient: vertical; /* tells in which direction (vertical or horizontal) to count the lines */
     overflow: hidden; /* hides all the lines from line 5 */
     overflow-wrap: break-word; /* break long words  */
-    font-size: 1.15rem;
-    line-height: 1.2;
+    font-size: 1.1rem;
+    line-height: 1.4;
     cursor: pointer;
+    letter-spacing: 0.03rem;
+    color: var(--secondary-color);
+    min-height: 6.2rem;
 }
 .container{
-    position: absolute;
-    bottom: 0;
-    width: 90%;
-    border-top: 2px solid black;
+    margin-top: auto;
+    border-top: 0.1rem solid var(--border-color);
     display: flex;
     margin-top: 1.5rem;
-    padding: 0.2rem 0rem;
-    padding-top: 0.54rem;
+    padding-top: 1.3rem;
 }
 .time{
     display: flex;
-    gap: 0.2rem;
-    /* align-items: center; */
+    gap: 0.4rem;
+    color: var(--secondary-color);
+}
+.time p{
+    font-size: 0.9rem;
+    color: var(--secondary-color);
 }
 .icon_wrapper{
+    display: none;
     margin-left: auto;
     cursor: pointer;
+    color: var(--secondary-color);
+}
+.component_border:hover .icon_wrapper{
+    display: block;
 }
 .icon_wrapper:hover{
-    color: red;
+    color: #ef4444;
 }

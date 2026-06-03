@@ -1,29 +1,46 @@
 .header{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
     display: flex;
-    border: 2px solid black;
-    padding: 0.5rem 1rem;
+    border-bottom: 0.1px solid #f0f0f0;
+    padding: 0.5rem 3rem;
     align-items: center;
+    height: 5rem;
+    background-color: #fafafae6;
 }
 .div_company{
     display: flex;
     gap: 0.5rem;
     align-items: center;
 }
-.div_company img{
-    width: 1.5rem;
-    height: 1.5rem;
+.logo_wrapper{
+    rotate: 270deg;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    display: flex; /* to make it in the center */
+    border-radius: 0.4rem;
 }
 .div_company p{
-    color: pink;
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    font-weight: bolder;
 }
 .div_navigation{
     margin-left: auto;
 }
 .div_navigation a{
-    color: black;
-    margin-left: 0.5rem;
+    color: var(--secondary-color);
+    margin-left: 1.3rem;
     text-decoration: none;
+    font-size: 1rem;
 }
 .div_navigation a:hover{
-    color: red;
+    color: var(--primary-color);
+}
+.div_navigation .active{
+    color: var(--primary-btn-color);
+    pointer-events: none;
 }

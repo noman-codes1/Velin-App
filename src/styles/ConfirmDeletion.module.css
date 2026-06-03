@@ -2,51 +2,84 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-color: rgb(0, 0, 0, 0.8);
-    z-index: 10000;
+    background-color: rgb(174, 174, 174, 0.8);
+    backdrop-filter: blur(0.2rem);
+    z-index: 1000;
     inset: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* pointer-events: none; */
+    pointer-events: all;
 }
 .container{
-    background-color: beige;
+    background-color: #ffffff;
     padding: 2rem;
-    width: 28rem;
-    height: auto;
-    border-radius: 0.8rem;
+    width: 27rem;
+    height: 13.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }
 .warningIcon_wrapper{
-    background-color: blue;
+    background-color: #fdecec;
     display: inline-block;
-    padding: 0.5rem;
+    padding: 0.5rem 0.7rem;
     border-radius: 50%;
+    color: #ef4444;
 }
 .heading{
-    font-size: 2rem;
-    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-top: 1.3rem;
+    color: var(--primary-color);
 }
 .warning_para{
-    margin-top: 1rem;
-    font-size: 1.3rem;
+    margin-top: 0.7rem;
+    font-size: 1rem;
     padding-bottom: 2rem;
+    line-height: 1.4;
+    color: var(--secondary-color);
 }
 .cancelDel_btn{
-    border-top: 1px solid black;
-    padding-top: 1rem;
+    border-top: 0.1rem solid var(--border-color);
+    width: 27rem;
+    height: 4.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: var(--background-color);
 }
 .cancel_btn{
     margin-left: auto;
-    padding: 0.5rem 1.5rem;
     font-size: 0.95rem;
+    border-radius: 0.3rem;
+    border: 0.1rem solid var(--border-color);
+    color: var(--primary-color);
+    background-color: #ffffff;
+    height: 2.5rem;
+    padding: 0 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+.cancel_btn:hover{
+    background-color: var(--background-color);
 }
 .del_btn{
-    padding: 0.5rem 1.5rem;
+    margin-right: 2rem;
     font-size: 0.95rem;
     display: flex;
     align-items: center;
     gap: 0.4rem;
+    height: 2.6rem;
+    padding: 0 1.5rem;
+    border: none;
+    background-color: #ef4444;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+.del_btn:hover{
+    background-color: #f45656;
 }

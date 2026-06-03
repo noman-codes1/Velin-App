@@ -7,15 +7,15 @@ const Footer = () => {
   return (
     <div className={styles.component_border}>
       <div className={styles.div_one}>
-        <div>
-          <PenTool size={18} color="white"/>
+        <div className={styles.icon_wrapper}>
+          <PenTool size={18} />
         </div>
-        <p>&copy; VelinApp. Minimalism meets utilty.</p>
+        <p>&copy; Velin App. Minimalism meets utilty.</p>
       </div>
       <div className={styles.div_two}>
-        <Link to="/privacy">Privacy</Link>
-        <Link to="/terms">Terms</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/end">Privacy</Link>
+        <Link to="/end">Terms</Link>
+        <Link to="/end">Contact</Link>
       </div>
     </div>
   );

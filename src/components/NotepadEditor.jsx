@@ -1,65 +1,75 @@
 import React from "react";
 import styles from "../styles/NotepadEditor.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import RecentHistory from "./RecentHistory";
+import { Check } from "lucide-react";
 
 const NotepadEditor = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
-  const [isDataPresent, setIsDataPresent] = useState(false)
-  const [dataNote, setDataNote] = useState(JSON.parse(localStorage.getItem("noteData")) || [])
-
+  const [isDataPresent, setIsDataPresent] = useState(false);
+  const [dataNote, setDataNote] = useState(
+    JSON.parse(localStorage.getItem("noteData")) || [],
+  );
+  const [showAlertMessage, setShowAlertMessage] = useState(false);
+ 
   //handling submission when the form is being submitted
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     //getting old data and merging it with new data basically replacing
     //a whole array because array gets replaced
-    const oldNote = dataNote
+    const oldNote = dataNote;
     const newNote = {
-      id : crypto.randomUUID(),
-      userTitle : title,
-      userDescr : desc,
-      createdAt : Date.now()
-    }
-    const updatedArray = [...oldNote, newNote]
-    localStorage.setItem("noteData", JSON.stringify(updatedArray))
-    setDataNote(updatedArray)
-    console.log(dataNote)
+      id: crypto.randomUUID(),
+      userTitle: title,
+      userDescr: desc,
+      createdAt: Date.now(),
+    };
+    const updatedArray = [...oldNote, newNote];
+    localStorage.setItem("noteData", JSON.stringify(updatedArray));
+    setDataNote(updatedArray);
+    console.log(dataNote);
 
     //reseting the state
-    setTitle("")
-    setDesc("")
+    setTitle("");
+    setDesc("");
 
     //knowing the data was submitted
-    alert("Data is successfully saved")
+    //make sure to useRef and useState to solve the react issue here...
+    setShowAlertMessage(true)
+    const alertTimer = setTimeout(() => {
+      setShowAlertMessage(false)
+    }, 3000);
 
-    //changing the UI state of the Recent History when submit 
+    //changing the UI state of the Recent History when submit
     //button is clicked (Not Present UI vs Present UI)
-    setIsDataPresent(true)
+    setIsDataPresent(true);
   };
 
   //to toggle the UI in the 'Recent History' for the first time
   useEffect(() => {
-    if (dataNote.length === 0){
-      setIsDataPresent(false)
+    if (dataNote.length === 0) {
+      setIsDataPresent(false);
     } else {
-      setIsDataPresent(true)
+      setIsDataPresent(true);
     }
+    console.log("MOUNTED");
     // setIsDataPresent(!!JSON.parse(localStorage.getItem("noteData")))
-  }, [])
+  }, []);
 
   //handling deletion of
-  const deleteFunction = (deleteItemId)=>{
-    const arrayAfterDeletion = dataNote.filter(elem => elem.id != deleteItemId)
-    localStorage.setItem("noteData", JSON.stringify(arrayAfterDeletion))
-    setDataNote(arrayAfterDeletion)
+  const deleteFunction = (deleteItemId) => {
+    const arrayAfterDeletion = dataNote.filter(
+      (elem) => elem.id != deleteItemId,
+    );
+    localStorage.setItem("noteData", JSON.stringify(arrayAfterDeletion));
+    setDataNote(arrayAfterDeletion);
 
     //checking and stopping the conditional execution if empty array is present
-    if(arrayAfterDeletion.length === 0){
-      setIsDataPresent(false)
+    if (arrayAfterDeletion.length === 0) {
+      setIsDataPresent(false);
     }
-  }
-  
+  };
 
   return (
     <div>
@@ -69,7 +79,10 @@ const NotepadEditor = () => {
         <p className={styles.dialog}>
           A minimalist space for your ideas, meetings, and daily reflections.
         </p>
-        <form onSubmit={(event) => handleSubmit(event)} className={styles.editor}>
+        <form
+          onSubmit={(event) => handleSubmit(event)}
+          className={styles.editor}
+        >
           <input
             type="text"
             value={title}
@@ -87,17 +100,29 @@ const NotepadEditor = () => {
             required
             maxLength="3200"
           ></textarea>
-          <div>
+          <div className={styles.letterAndBtn_div}>
             <p>{desc.length}/3200</p>
-            <button type="submit">
-              Save Note
-            </button>
+            <button type="submit">Save Note</button>
           </div>
         </form>
       </div>
 
+      {/* Message for note saved successfully */}
+      {showAlertMessage && (
+        <div className={styles.saveNote_alert}>
+          <div>
+            <Check size={12}/>
+          </div>
+          <p>Note saved successfully</p>
+        </div>
+      )}
+
       {/* Putting here a dynamic content */}
-      <RecentHistory isPresent={isDataPresent} dataArray={dataNote} itemToDeleteRH={deleteFunction}/>
+      <RecentHistory
+        isPresent={isDataPresent}
+        dataArray={dataNote}
+        itemToDeleteRH={deleteFunction}
+      />
     </div>
   );
 };

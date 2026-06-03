@@ -1,41 +1,62 @@
 .component_border{
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    padding: 6rem 0rem;
+    padding-top: 8rem;
+    background-color: var(--background-color);
 }
 .heading{
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
+    font-size: 2.55rem;
 }
 .container{
-    border: 2px solid pink;
-    padding: 8rem;
+    border: 0.2rem solid var(--border-color);
+    width: 42rem;
+    height: 27rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 .icon_wrapper{
-    display: flex;
-    justify-content: center;
     margin: 1rem;
+    color: #eaeaea;
 }
 .container p{
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 0 8rem;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    color: var(--secondary-color);
 }
 /* Do not think it's gonna conflict with other css files */
 /* because .container a and .container a of other css file will not be same */
 /* modular reason --- rest you understand from here */
 .container a{
-    background-color: blue;
-    display: flex;
-    justify-self: center;
+    background-color: var(--primary-btn-color);
     padding: 1rem 1.5rem;
-    color: white;
+    color: #ffffff;
     font-size: 1.2rem;
     text-decoration: none;
     border-radius: 0.5rem;
+    transition: all 0.3s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 .container a:hover{
-    background-color: red;
+    transform: translateY(-0.2rem);
+    background-color: var(--primary-btn-color-hover);
+}
+.plus{
+    font-size: 1.8rem;
 }

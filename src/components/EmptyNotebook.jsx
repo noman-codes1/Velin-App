@@ -12,7 +12,7 @@ const EmptyNotebook = () => {
             <FolderOpen size={90}/>
         </div>
         <p>It's quiet in here... You haven't saved any notes yet.</p>
-        <Link to="/">+ Create Your First Note</Link>
+        <Link to="/"><div className={styles.plus}>+</div>Create Your First Note</Link>
       </div>
     </div>
   );

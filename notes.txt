@@ -3,3 +3,12 @@ with dataArray of NotepadEditor.jsx. These are two independent variable,
 just the name are kept safe by mistake.
 
 2. user_title is classname but userTitle is a part of object.
+
+
+Regret while making the project
+1. Shouldn't have used the CSS Module
+2. 
+
+I didn't gave much time in creating the better the UX for alert part.
+That I will do after building all other stuffs... Maybe we will do after
+completion of the project

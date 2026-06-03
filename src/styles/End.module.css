@@ -1,0 +1,59 @@
+.component_border{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+.para_one{
+    border: 0.1rem solid var(--border-color);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    background-color: #ffffff;
+    border-radius: 5rem;
+    color: var(--secondary-color);
+}
+.component_border h1{
+    margin: 3rem 20rem;
+    font-size: 3.7rem;
+    text-align: center;
+    font-weight: lighter;
+    color: var(--primary-color);
+}
+.para_two{
+    font-size: 1.4rem;
+    margin-bottom: 2.8rem;
+    color: var(--secondary-color);
+}
+.container{
+    display: flex;
+    gap: 1rem;
+}
+.github,.home{
+    padding: 1rem 1.5rem;
+    display: flex;
+    gap: 0.4rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+.github{
+    border: 0.1rem solid var(--border-color);
+    color: var(--primary-color);
+    background-color: #ffffff;
+}
+.github:hover{
+    background-color: transparent;
+}
+.home{
+    border: 0.1rem solid var(--primary-btn-color);
+    color: var(--primary-btn-color);
+    background-color: transparent;
+}
+.home:hover{
+    border-color: var(--primary-btn-color-hover);
+    color: var(--primary-btn-color-hover);
+}

@@ -21,7 +21,7 @@ const RecentHistory = ({ isPresent, dataArray, itemToDeleteRH }) => {
       {!isPresent ? (
         <div className={styles.container}>
           <div className={styles.icon_wrapper}>
-            <FileText size={34} />
+            <FileText size={25} />
           </div>
           <p className={styles.para_one}>No notes yet</p>
           <p className={styles.para_two}>

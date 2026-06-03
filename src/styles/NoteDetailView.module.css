@@ -1,47 +1,75 @@
 .border_ofNDV{
-    /* height: 100vh; */
-    border: 2px solid red;
-    padding: 4rem 18rem;
+    padding: 6rem 0rem;
+    padding-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
 }
 .container{
-    min-height: 80vh;
-    border: 2px solid maroon;
-    padding: 2rem;
+    width: 45rem;
+    border: 0.1rem solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
     height: auto;
-    display: flex;
-    flex-direction: column;
     position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 .container_divOne{
     display: flex;
     padding-bottom: 0.5rem;
 }
+.container_divOne button{
+    border: none;
+    background-color: transparent;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+.container_divOne button:hover{
+    color: var(--primary-color);
+}
 .container_divOne p{
     margin-left: auto;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
 }
 .heading{
-    margin-top: 1rem;
-    font-size: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid black;
+    margin-top: 2rem;
+    font-size: 2.8rem;
+    padding-bottom: 2rem;
+    color: var(--primary-color);
+    border-bottom: 0.1rem solid var(--border-color);
 }
 .description{
-    margin-top: 1.5rem;
-    font-size: 1.3rem;
+    min-height: 50vh;
+    margin-top: 2rem;
+    font-size: 1.1rem;
     line-height: 1.35;
     letter-spacing: 0.05rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
+    color: var(--secondary-color);
 }
 .container_divTwo{
     margin-top: auto;
-    border-top: 1px solid black;
-    padding: 2rem 0rem;
+    border-top: 0.1rem solid var(--border-color);
+    height: 5rem;
     display: flex;
+    align-items: center;
 }
 .edit_btn{
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    pointer-events: none;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    color: var(--primary-btn-color);
+    border: 0.1rem solid var(--primary-btn-color);
     display: none;
 }
 .delete_btn{
@@ -49,9 +77,13 @@
     cursor: pointer;
     border: none;
     background-color: transparent;
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
+    padding: 0.8rem 0rem;
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     gap: 0.3rem;
+    color: #f45656;
+}
+.delete_btn:hover{
+    color: #ec3535;
 }

@@ -13,7 +13,7 @@ const Card = ({ cardData, itemToDeleteCard }) => {
 
   return (
     <div className={styles.component_border}>
-      <h3 className={styles.user_title}>{cardData.userTitle}</h3>
+      <h4 className={styles.user_title}>{cardData.userTitle}</h4>
       <p
         onClick={() => navigate(`/viewnotes/${cardData.id}`)}
         className={styles.user_description}
@@ -23,7 +23,7 @@ const Card = ({ cardData, itemToDeleteCard }) => {
       <div className={styles.container}>
         <div className={styles.time}>
           <div>
-            <Clock3 size={18} />
+            <Clock3 size={16} />
           </div>
           <p>{getTheTime(cardData.createdAt)}</p>
         </div>
@@ -31,7 +31,7 @@ const Card = ({ cardData, itemToDeleteCard }) => {
           onClick={() => setShowComponentDeletion(true)}
           className={styles.icon_wrapper}
         >
-          <Trash size={18} />
+          <Trash size={16} />
         </div>
       </div>
       {showComponentDeletion && (
