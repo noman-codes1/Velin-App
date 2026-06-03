@@ -57,3 +57,13 @@
     border-color: var(--primary-btn-color-hover);
     color: var(--primary-btn-color-hover);
 }
+@media (max-width: 1279px) {
+    .component_border h1{
+        margin: 3rem 10rem;
+    }
+}
+@media (max-width: 1023px) {
+    .component_border h1{
+        margin: 3rem 5rem;
+    }
+}

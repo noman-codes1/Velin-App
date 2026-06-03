@@ -1,6 +1,5 @@
 .component_border{
     width: 100%;
-    min-height: 100vh;
     padding: 8rem 5rem;
     background-color: var(--background-color);
 }
@@ -145,4 +144,36 @@
     background-color: var(--primary-btn-color);
     color: #ffffff;
     border: none;
+}
+@media (max-width: 1279px) {
+    .card_container{
+        margin-top: 4rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 7rem;
+    }
+    .card_notFound{
+        height: 40vh;
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    .card_notFound p{
+        margin: 0 15rem;
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width:911px) {
+    .container{
+        display: block;
+        margin-left: -2rem;
+    }
+    .heading_length{
+        margin-bottom: 1rem;
+    }
+    .card_notFound p{
+        margin: 0 8rem;
+        margin-bottom: 2rem;
+    }
 }

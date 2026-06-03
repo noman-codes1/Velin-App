@@ -87,3 +87,8 @@
 .delete_btn:hover{
     color: #ec3535;
 }
+@media (max-width: 1279px) {
+    .border_ofNDV{
+        padding: 10rem 0;
+    }
+}

@@ -60,3 +60,19 @@
 .plus{
     font-size: 1.8rem;
 }
+@media (max-width:1279px) {
+    .component_border{
+        height: 100vh;
+        padding-top: 20rem;
+        padding-bottom: 18rem;
+    }
+    .container{
+        padding-bottom: 2rem;
+    }
+}
+@media (max-width: 1023px) {
+    .container{
+        width: 37rem;
+        padding: 10rem 0;
+    }
+}
