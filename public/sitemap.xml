@@ -15,10 +15,6 @@
   </url>
 
   <url>
-    <loc>https://velin.meetnoman.com/viewnotes/:id</loc>
-  </url>
-
-  <url>
     <loc>https://velin.meetnoman.com/end</loc>
   </url>
 
