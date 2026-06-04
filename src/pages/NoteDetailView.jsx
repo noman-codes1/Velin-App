@@ -7,12 +7,13 @@ import styles from "../styles/NoteDetailView.module.css";
 import { getTheTime } from "../utils/date";
 import ConfirmDeletion from "../components/ConfirmDeletion";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const NoteDetailView = () => {
   const [showDeleteComponent, setShowDeleteComponent] = useState(false);
 
   const navigate = useNavigate();
-  const { id } = useParams(); //params gives JS object.. and we are destructuring here
+  const { id } = useParams(); //params gives JS object of id.. and we are destructuring here
   console.log(id);
 
   //getting data from the localstorage
@@ -30,6 +31,9 @@ const NoteDetailView = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>{dataObject.userTitle}</title>
+      </Helmet>
       {!!dataObject && (
         <div>
           <Navbar />
@@ -40,7 +44,7 @@ const NoteDetailView = () => {
                   <ChevronLeft size={15} />
                   Back to Notes
                 </button>
-                <p>Created {getTheTime(dataObject.createdAt)}</p>
+                <p>~ {getTheTime(dataObject.createdAt)}</p>
               </div>
               <h1 className={styles.heading}>{dataObject.userTitle}</h1>
               <div className={styles.description}>{dataObject.userDescr}</div>

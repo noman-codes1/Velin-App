@@ -2,10 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaArrowRight } from "react-icons/fa";
 import styles from '../styles/End.module.css'
+import { Helmet } from "react-helmet-async";
 
 const End = () => {
   return (
     <div className={styles.component_border}>
+      <Helmet>
+        <title>You have reached death</title>
+      </Helmet>
       <p className={styles.para_one}>Project Complete</p>
       <h1>You have reached the end of the project.</h1>
       <p className={styles.para_two}>Thank you for visiting and exploring this application.</p>

@@ -3,10 +3,14 @@ import { Eye, Lock, Zap } from "lucide-react";
 import styles from "../styles/About.module.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>About Us</title>
+      </Helmet>
       <Navbar />
       <div className={styles.component_border}>
         <h1>About Velin App</h1>

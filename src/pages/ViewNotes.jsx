@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Notebook from '../components/Notebook'
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 const ViewNotes = () => {
 const [containsDataArray, setContainsDataArray] = useState(JSON.parse(localStorage.getItem("noteData")) || [])
@@ -17,6 +18,9 @@ const processDeletion = (id) =>{
 
   return (
     <div>
+      <Helmet>
+        <title>View Notes</title>
+      </Helmet>
       <Navbar/>
       {containsDataArray.length === 0 ? <EmptyNotebook/> : <Notebook dataArray={containsDataArray} deleteFunction={processDeletion}/>}
       <Footer/>

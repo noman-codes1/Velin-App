@@ -75,3 +75,13 @@
         width: 22rem;
     }
 }
+@media (max-width: 767px) {
+    .component_border{
+        width: 28rem;
+    }
+}
+@media (max-width: 475px) {
+    .component_border{
+        width: 100%;
+    }
+}

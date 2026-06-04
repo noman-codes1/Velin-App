@@ -142,4 +142,37 @@
     .editor{
         margin: 0 1rem;
     }
+    .saveNote_alert{
+        right: 5rem;
+    }
+}
+@media (max-width: 475px) {
+    .component_border{
+        padding: 1rem;
+        padding-top: 8rem;
+    }
+    .dialog{
+        margin: 0 0.5rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.4;
+    }
+    .editor{
+        padding: 0 1rem;
+        margin: 0 0.5rem;
+    }
+    .letterAndBtn_div p{
+        font-size: 1rem;
+    }
+    .letterAndBtn_div button{
+        font-size: 1rem;
+        padding: 0.65rem 1.5rem;
+    }
+    .saveNote_alert {
+        right: 2rem;
+    }
+}
+@media (max-width: 359px) {
+    .editor{
+        grid-template-columns: 16rem;
+    }
 }

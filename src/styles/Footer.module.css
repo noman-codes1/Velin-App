@@ -33,3 +33,19 @@
 .div_two a:hover{
     color: var(--primary-color);
 }
+@media (max-width: 767px) {
+    .component_border{
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 3rem;
+    }
+    .div_two{
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}
+@media (max-width: 475px) {
+    .component_border{
+        padding: 2rem 1rem;
+    }
+}

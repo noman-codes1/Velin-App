@@ -3,6 +3,7 @@ import styles from "../styles/NotepadEditor.module.css";
 import { useState, useEffect, useRef } from "react";
 import RecentHistory from "./RecentHistory";
 import { Check } from "lucide-react";
+import { v4 as uuidv4 } from "uuid";
 
 const NotepadEditor = () => {
   const [title, setTitle] = useState("");
@@ -12,7 +13,7 @@ const NotepadEditor = () => {
     JSON.parse(localStorage.getItem("noteData")) || [],
   );
   const [showAlertMessage, setShowAlertMessage] = useState(false);
- 
+
   //handling submission when the form is being submitted
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +21,7 @@ const NotepadEditor = () => {
     //a whole array because array gets replaced
     const oldNote = dataNote;
     const newNote = {
-      id: crypto.randomUUID(),
+      id: uuidv4(), //crypto didn't worked well in mobile phone
       userTitle: title,
       userDescr: desc,
       createdAt: Date.now(),
@@ -36,9 +37,9 @@ const NotepadEditor = () => {
 
     //knowing the data was submitted
     //make sure to useRef and useState to solve the react issue here...
-    setShowAlertMessage(true)
+    setShowAlertMessage(true);
     const alertTimer = setTimeout(() => {
-      setShowAlertMessage(false)
+      setShowAlertMessage(false);
     }, 3000);
 
     //changing the UI state of the Recent History when submit
@@ -111,7 +112,7 @@ const NotepadEditor = () => {
       {showAlertMessage && (
         <div className={styles.saveNote_alert}>
           <div>
-            <Check size={12}/>
+            <Check size={12} />
           </div>
           <p>Note saved successfully</p>
         </div>

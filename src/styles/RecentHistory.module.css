@@ -75,3 +75,28 @@
         grid-template-columns: repeat(2, 22rem);
     }
 }
+@media (max-width : 542px) {
+    .component_borders_noData{
+        padding: 5rem 3rem;
+    }
+    .para_two{
+        margin: 0 4rem;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 475px) {
+    .component_borders_noData{
+        padding: 5rem 1.5rem;
+    }
+    .para_two{
+        margin: 0 2rem;
+    }
+    .component_borders_data{
+         padding: 1.5rem;
+         padding-bottom: 6rem;
+    }
+}

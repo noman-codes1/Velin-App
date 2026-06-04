@@ -65,5 +65,34 @@
 @media (max-width: 1023px) {
     .component_border h1{
         margin: 3rem 5rem;
+        font-weight: 400;
+    }
+}
+@media (max-width: 767px) {
+    .component_border h1{
+        margin: 3rem;
+    }
+    .para_two{
+        text-align: center;
+        margin: 0 2rem;
+        margin-bottom: 2.8rem;
+    }
+}
+@media (max-width: 475px) {
+    .component_border{
+        height: 105vh;
+    }
+    .component_border h1{
+        margin: 3rem 1.5rem;
+    }
+    .para_two{
+        margin: 0 1.5rem;
+        margin-bottom: 2.8rem;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .home{
+        justify-content: center;
     }
 }

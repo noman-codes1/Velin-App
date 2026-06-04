@@ -92,3 +92,17 @@
         padding: 10rem 0;
     }
 }
+@media (max-width: 767px) {
+    .container{
+        width: 30rem;
+    }
+}
+@media (max-width: 475px) {
+    .border_ofNDV{
+        padding: 10rem 1rem;
+    }
+    .container{
+        width: 100%;
+        padding: 1rem;
+    }
+}

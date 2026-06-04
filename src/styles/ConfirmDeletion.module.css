@@ -83,3 +83,11 @@
 .del_btn:hover{
     background-color: #f45656;
 }
+@media (max-width: 475px) {
+    .component_border{
+        padding: 1rem;
+    }
+    .container, .cancelDel_btn{
+        width: 100%;
+    }
+}
