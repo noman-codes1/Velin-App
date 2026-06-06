@@ -12,9 +12,15 @@ const End = () => {
       </Helmet>
       <p className={styles.para_one}>Project Complete</p>
       <h1>You have reached the end of the project.</h1>
-      <p className={styles.para_two}>Thank you for visiting and exploring this application.</p>
+      <p className={styles.para_two}>
+        Thank you for visiting and exploring this application.
+      </p>
       <div className={styles.container}>
-        <a href="#" className={styles.github}>
+        <a
+          href="https://github.com/noman-codes1/Velin-App"
+          target="_blank"
+          className={styles.github}
+        >
           <div className={styles.github_icon}>
             <FaGithub />
           </div>
@@ -23,7 +29,7 @@ const End = () => {
         <Link to="/" className={styles.home}>
           Back To Home
           <div className={styles.arrow_icon}>
-            <FaArrowRight size={12}/>
+            <FaArrowRight size={12} />
           </div>
         </Link>
       </div>
